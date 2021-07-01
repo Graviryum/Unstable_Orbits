@@ -1,0 +1,15 @@
+C:\Users\batuh\source\repos\Unstable Orbits\bin\Debug\Unstable Orbits.exe.config
+C:\Users\batuh\source\repos\Unstable Orbits\bin\Debug\Unstable Orbits.exe
+C:\Users\batuh\source\repos\Unstable Orbits\bin\Debug\Unstable Orbits.pdb
+C:\Users\batuh\source\repos\Unstable Orbits\bin\Debug\Unstable Orbits.xml
+C:\Users\batuh\source\repos\Unstable Orbits\obj\Debug\Unstable Orbits.vbprojAssemblyReference.cache
+C:\Users\batuh\source\repos\Unstable Orbits\obj\Debug\Unstable_Orbits.MainMenu.resources
+C:\Users\batuh\source\repos\Unstable Orbits\obj\Debug\Unstable_Orbits.Resources.resources
+C:\Users\batuh\source\repos\Unstable Orbits\obj\Debug\Unstable_Orbits.ShipMaker.resources
+C:\Users\batuh\source\repos\Unstable Orbits\obj\Debug\Unstable Orbits.vbproj.GenerateResource.cache
+C:\Users\batuh\source\repos\Unstable Orbits\obj\Debug\Unstable Orbits.vbproj.CoreCompileInputs.cache
+C:\Users\batuh\source\repos\Unstable Orbits\obj\Debug\Unstable Orbits.exe
+C:\Users\batuh\source\repos\Unstable Orbits\obj\Debug\Unstable Orbits.xml
+C:\Users\batuh\source\repos\Unstable Orbits\obj\Debug\Unstable Orbits.pdb
+C:\Users\batuh\source\repos\Unstable Orbits\obj\Debug\Unstable_Orbits.CaptainMaker.resources
+C:\Users\batuh\source\repos\Unstable Orbits\obj\Debug\Unstable_Orbits.Play.resources
