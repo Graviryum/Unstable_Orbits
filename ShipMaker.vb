@@ -170,55 +170,7 @@ Federal - Only welcome in federal space."
         Loop
         i = 0
 
-
-
         CaptainMaker.Show()
-
-
-        Select Case FactionSelect.SelectedIndex
-            Case 0 '' Hive Stats
-                CaptainMaker.StrP.Text = "0"
-                CaptainMaker.AglP.Text = "0"
-                CaptainMaker.EndurP.Text = "0"
-                CaptainMaker.PercepP.Text = "0"
-
-                CaptainMaker.PilotP.Text = "30"
-                CaptainMaker.EngiP.Text = "30"
-                CaptainMaker.MedicP.Text = "30"
-                CaptainMaker.ScienceP.Text = "30"
-            Case 1 '' Pirate Stats
-                CaptainMaker.StrP.Text = "2"
-                CaptainMaker.AglP.Text = "1"
-                CaptainMaker.EndurP.Text = "2"
-                CaptainMaker.PercepP.Text = "1"
-
-                CaptainMaker.PilotP.Text = "10"
-                CaptainMaker.EngiP.Text = "5"
-                CaptainMaker.MedicP.Text = "10"
-                CaptainMaker.ScienceP.Text = "5"
-            Case 2 '' Imperial Stats
-                CaptainMaker.StrP.Text = "3"
-                CaptainMaker.AglP.Text = "3"
-                CaptainMaker.EndurP.Text = "3"
-                CaptainMaker.PercepP.Text = "3"
-
-                CaptainMaker.PilotP.Text = "10"
-                CaptainMaker.EngiP.Text = "15"
-                CaptainMaker.MedicP.Text = "10"
-                CaptainMaker.ScienceP.Text = "15"
-            Case 3 '' Federal Stats
-                CaptainMaker.StrP.Text = "1"
-                CaptainMaker.AglP.Text = "1"
-                CaptainMaker.EndurP.Text = "2"
-                CaptainMaker.PercepP.Text = "2"
-
-                CaptainMaker.PilotP.Text = "20"
-                CaptainMaker.EngiP.Text = "15"
-                CaptainMaker.MedicP.Text = "15"
-                CaptainMaker.ScienceP.Text = "15"
-        End Select
-
-
         Me.Close()
     End Sub
 End Class

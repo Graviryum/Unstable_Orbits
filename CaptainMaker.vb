@@ -3,17 +3,14 @@
     Private Sub CaptainMaker_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MainSave = Split(My.Settings.Saves, ".")
 
-        StrDown.Enabled = False
-        AglDown.Enabled = False
-        EndurDown.Enabled = False
-        PerDown.Enabled = False
-        PilotDown.Enabled = False
-        EngiDown.Enabled = False
-        MedicDown.Enabled = False
-        SciDown.Enabled = False
+        resetting()
     End Sub
 
     Private Sub ResetPoints_Click(sender As Object, e As EventArgs) Handles ResetPoints.Click
+        resetting()
+    End Sub
+
+    Sub resetting()
         Saveling = Split(MainSave(My.Settings.ActiveSave), ",")
         Select Case Saveling(2)
             Case 0 '' Hive Stats
@@ -22,13 +19,13 @@
                 EndurP.Text = "0"
                 PercepP.Text = "0"
 
-                PilotP.Text = "30"
-                EngiP.Text = "30"
-                MedicP.Text = "30"
-                ScienceP.Text = "30"
+                PilotP.Text = "20"
+                EngiP.Text = "20"
+                MedicP.Text = "20"
+                ScienceP.Text = "20"
 
-                TraitPoints.Text = 1
-                SkillPoints.Text = 5
+                TraitPoints.Text = 0
+                SkillPoints.Text = 10
 
             Case 1 '' Pirate Stats
                 StrP.Text = "2"
@@ -74,16 +71,22 @@
 
         End Select
 
-        StrUP.Enabled = True
-        AglUP.Enabled = True
-        EndurUP.Enabled = True
-        PerUP.Enabled = True
+        If Saveling(2) = 0 Then
+            StrUP.Enabled = False
+            AglUP.Enabled = False
+            EndurUP.Enabled = False
+            PerUP.Enabled = False
+        Else
+            StrUP.Enabled = True
+            AglUP.Enabled = True
+            EndurUP.Enabled = True
+            PerUP.Enabled = True
+        End If
 
         PilotUP.Enabled = True
         EngiUP.Enabled = True
         MedicUP.Enabled = True
         SciUP.Enabled = True
-
 
         StrDown.Enabled = False
         AglDown.Enabled = False
@@ -94,7 +97,6 @@
         EngiDown.Enabled = False
         MedicDown.Enabled = False
         SciDown.Enabled = False
-
     End Sub
 
     Private Sub GoBack_Click(sender As Object, e As EventArgs) Handles GoBack.Click
@@ -104,33 +106,42 @@
 
     Private Sub Fin_Click(sender As Object, e As EventArgs) Handles FinButton.Click
 
-        Saveling = Split(MainSave(My.Settings.ActiveSave), ",")
 
-        Saveling(3) = PC_Naming.Text
-        Saveling(4) = Ship_Naming.Text
+        If PC_Naming.TextLength < 1 Then
+            MsgBox("Give your captain name a name!")
+        ElseIf Ship_Naming.TextLength < 1 Then
+            MsgBox("What kind of captain don't give a name to their ship?")
+        Else
 
-        Saveling(14) = StrP.Text
-        Saveling(15) = AglP.Text
-        Saveling(16) = EndurP.Text
-        Saveling(17) = PercepP.Text
-        Saveling(18) = PilotP.Text
-        Saveling(19) = EngiP.Text
-        Saveling(20) = MedicP.Text
-        Saveling(21) = ScienceP.Text
-        Saveling(22) = HairS_Selecting.SelectedItem
-        Saveling(23) = HairC_Selecting.SelectedItem
-        Saveling(24) = Eye_Selecting.SelectedItem
-        Saveling(25) = Height_Selecting.SelectedItem
-        Saveling(26) = Body_Selecting.SelectedItem
-        Saveling(27) = Skin_Selecting.SelectedItem
-        Saveling(28) = Age_Secting.SelectedItem
+            Saveling = Split(MainSave(My.Settings.ActiveSave), ",")
+
+            Saveling(3) = PC_Naming.Text
+            Saveling(4) = Ship_Naming.Text
+
+            Saveling(14) = StrP.Text
+            Saveling(15) = AglP.Text
+            Saveling(16) = EndurP.Text
+            Saveling(17) = PercepP.Text
+            Saveling(18) = PilotP.Text
+            Saveling(19) = EngiP.Text
+            Saveling(20) = MedicP.Text
+            Saveling(21) = ScienceP.Text
+            Saveling(22) = HairS_Selecting.SelectedItem
+            Saveling(23) = HairC_Selecting.SelectedItem
+            Saveling(24) = Eye_Selecting.SelectedItem
+            Saveling(25) = Height_Selecting.SelectedItem
+            Saveling(26) = Body_Selecting.SelectedItem
+            Saveling(27) = Skin_Selecting.SelectedItem
+            Saveling(28) = Age_Selecting.SelectedItem
 
 
-        MainSave(My.Settings.ActiveSave) = Join(Saveling, ",")
-        My.Settings.Saves = Join(MainSave, ".")
-        Play.Show()
+            MainSave(My.Settings.ActiveSave) = Join(Saveling, ",")
+            My.Settings.Saves = Join(MainSave, ".")
+            Play.Show()
 
-        Me.Close()
+            Me.Close()
+
+        End If
 
 
     End Sub
@@ -237,6 +248,91 @@
         StatDown(7)
     End Sub
 
+    Private Sub C_HairS_Click(sender As Object, e As EventArgs) Handles C_HairS.Click
+        Customize(0, C_HairS.Text)
+    End Sub
+
+    Private Sub C_HairC_Click(sender As Object, e As EventArgs) Handles C_HairC.Click
+        Customize(1, C_HairC.Text)
+    End Sub
+
+    Private Sub C_Eye_Click(sender As Object, e As EventArgs) Handles C_Eye.Click
+        Customize(2, C_Eye.Text)
+    End Sub
+
+    Private Sub C_Height_Click(sender As Object, e As EventArgs) Handles C_Height.Click
+        Customize(3, C_Height.Text)
+    End Sub
+
+    Private Sub C_Body_Click(sender As Object, e As EventArgs) Handles C_Body.Click
+        Customize(4, C_Body.Text)
+    End Sub
+
+    Private Sub C_Skin_Click(sender As Object, e As EventArgs) Handles C_Skin.Click
+        Customize(5, C_Skin.Text)
+    End Sub
+
+    Private Sub C_Age_Click(sender As Object, e As EventArgs) Handles C_Age.Click
+        Customize(6, C_Age.Text)
+    End Sub
+
+    Sub Customize(Aspect As Integer, Button As String)
+
+        If Button = "Custom" Then
+            Select Case Aspect
+                Case 0
+                    C_HairS.Text = "Back"
+                    HairS_Selecting.Hide()
+                Case 1
+                    C_HairC.Text = "Back"
+                    HairC_Selecting.Hide()
+                Case 2
+                    C_Eye.Text = "Back"
+                    Eye_Selecting.Hide()
+                Case 3
+                    C_Height.Text = "Back"
+                    Height_Selecting.Hide()
+                Case 4
+                    C_Body.Text = "Back"
+                    Body_Selecting.Hide()
+                Case 5
+                    C_Skin.Text = "Back"
+                    Skin_Selecting.Hide()
+                Case 6
+                    C_Age.Text = "Back"
+                    Age_Selecting.Hide()
+            End Select
+        Else
+            Select Case Aspect
+                Case 0
+                    C_HairS.Text = "Custom"
+                    HairS_Selecting.Show()
+                Case 1
+                    C_HairC.Text = "Custom"
+                    HairC_Selecting.Show()
+                Case 2
+                    C_Eye.Text = "Custom"
+                    Eye_Selecting.Show()
+                Case 3
+                    C_Height.Text = "Custom"
+                    Height_Selecting.Show()
+                Case 4
+                    C_Body.Text = "Custom"
+                    Body_Selecting.Show()
+                Case 5
+                    C_Skin.Text = "Custom"
+                    Skin_Selecting.Show()
+                Case 6
+                    C_Age.Text = "Custom"
+                    Age_Selecting.Show()
+            End Select
+        End If
+
+    End Sub
+
+    Private Sub RandomApperance_Click(sender As Object, e As EventArgs) Handles RandomApperance.Click
+
+    End Sub
 
     Sub StatDown(Stat As Integer)
         Saveling = Split(MainSave(My.Settings.ActiveSave), ",")
@@ -296,7 +392,7 @@
                         EndurUP.Enabled = True
                         PerUP.Enabled = True
                     Case 4 'Pilot
-                        If PilotP.Text = 31 Then
+                        If PilotP.Text = 21 Then
                             PilotP.Text = PilotP.Text - 1
                             PilotDown.Enabled = False
                             SkillPoints.Text = SkillPoints.Text + 1
@@ -309,7 +405,7 @@
                         MedicUP.Enabled = True
                         SciUP.Enabled = True
                     Case 5 'Engi
-                        If EngiP.Text = 31 Then
+                        If EngiP.Text = 21 Then
                             EngiP.Text = EngiP.Text - 1
                             EngiDown.Enabled = False
                             SkillPoints.Text = SkillPoints.Text + 1
@@ -322,7 +418,7 @@
                         MedicUP.Enabled = True
                         SciUP.Enabled = True
                     Case 6 'Medic
-                        If MedicP.Text = 31 Then
+                        If MedicP.Text = 21 Then
                             MedicP.Text = MedicP.Text - 1
                             MedicDown.Enabled = False
                             SkillPoints.Text = SkillPoints.Text + 1
@@ -335,7 +431,7 @@
                         MedicUP.Enabled = True
                         SciUP.Enabled = True
                     Case 7 'Science
-                        If ScienceP.Text = 31 Then
+                        If ScienceP.Text = 21 Then
                             ScienceP.Text = ScienceP.Text - 1
                             SciDown.Enabled = False
                             SkillPoints.Text = SkillPoints.Text + 1

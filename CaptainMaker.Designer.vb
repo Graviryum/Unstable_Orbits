@@ -31,21 +31,21 @@ Partial Class CaptainMaker
         Me.FinButton = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label25 = New System.Windows.Forms.Label()
-        Me.Button8 = New System.Windows.Forms.Button()
+        Me.C_Eye = New System.Windows.Forms.Button()
         Me.Eye_Selecting = New System.Windows.Forms.ComboBox()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Age_Secting = New System.Windows.Forms.ComboBox()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.C_Age = New System.Windows.Forms.Button()
+        Me.Age_Selecting = New System.Windows.Forms.ComboBox()
+        Me.C_Skin = New System.Windows.Forms.Button()
         Me.Skin_Selecting = New System.Windows.Forms.ComboBox()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.C_Body = New System.Windows.Forms.Button()
         Me.Body_Selecting = New System.Windows.Forms.ComboBox()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.C_Height = New System.Windows.Forms.Button()
         Me.Height_Selecting = New System.Windows.Forms.ComboBox()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.C_HairC = New System.Windows.Forms.Button()
         Me.HairC_Selecting = New System.Windows.Forms.ComboBox()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.C_HairS = New System.Windows.Forms.Button()
         Me.HairS_Selecting = New System.Windows.Forms.ComboBox()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
@@ -89,6 +89,7 @@ Partial Class CaptainMaker
         Me.EngiDown = New System.Windows.Forms.Button()
         Me.TraitPoints = New System.Windows.Forms.Label()
         Me.SkillPoints = New System.Windows.Forms.Label()
+        Me.RandomApperance = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -172,23 +173,24 @@ Partial Class CaptainMaker
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gray
+        Me.Panel1.Controls.Add(Me.RandomApperance)
         Me.Panel1.Controls.Add(Me.Label25)
-        Me.Panel1.Controls.Add(Me.Button8)
+        Me.Panel1.Controls.Add(Me.C_Eye)
         Me.Panel1.Controls.Add(Me.FinButton)
         Me.Panel1.Controls.Add(Me.Eye_Selecting)
         Me.Panel1.Controls.Add(Me.Label24)
         Me.Panel1.Controls.Add(Me.Label23)
-        Me.Panel1.Controls.Add(Me.Button7)
-        Me.Panel1.Controls.Add(Me.Age_Secting)
-        Me.Panel1.Controls.Add(Me.Button6)
+        Me.Panel1.Controls.Add(Me.C_Age)
+        Me.Panel1.Controls.Add(Me.Age_Selecting)
+        Me.Panel1.Controls.Add(Me.C_Skin)
         Me.Panel1.Controls.Add(Me.Skin_Selecting)
-        Me.Panel1.Controls.Add(Me.Button5)
+        Me.Panel1.Controls.Add(Me.C_Body)
         Me.Panel1.Controls.Add(Me.Body_Selecting)
-        Me.Panel1.Controls.Add(Me.Button4)
+        Me.Panel1.Controls.Add(Me.C_Height)
         Me.Panel1.Controls.Add(Me.Height_Selecting)
-        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.C_HairC)
         Me.Panel1.Controls.Add(Me.HairC_Selecting)
-        Me.Panel1.Controls.Add(Me.Button2)
+        Me.Panel1.Controls.Add(Me.C_HairS)
         Me.Panel1.Controls.Add(Me.HairS_Selecting)
         Me.Panel1.Controls.Add(Me.Label22)
         Me.Panel1.Controls.Add(Me.Label21)
@@ -212,22 +214,23 @@ Partial Class CaptainMaker
         Me.Label25.TabIndex = 45
         Me.Label25.Text = "No effect in gameplay. For now."
         '
-        'Button8
+        'C_Eye
         '
-        Me.Button8.BackColor = System.Drawing.Color.Gray
-        Me.Button8.FlatAppearance.BorderSize = 0
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.ForeColor = System.Drawing.Color.Black
-        Me.Button8.Location = New System.Drawing.Point(563, 252)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(100, 37)
-        Me.Button8.TabIndex = 43
-        Me.Button8.Text = "Custom"
-        Me.Button8.UseVisualStyleBackColor = False
+        Me.C_Eye.BackColor = System.Drawing.Color.Gray
+        Me.C_Eye.FlatAppearance.BorderSize = 0
+        Me.C_Eye.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.C_Eye.ForeColor = System.Drawing.Color.Black
+        Me.C_Eye.Location = New System.Drawing.Point(563, 252)
+        Me.C_Eye.Name = "C_Eye"
+        Me.C_Eye.Size = New System.Drawing.Size(100, 37)
+        Me.C_Eye.TabIndex = 43
+        Me.C_Eye.Text = "Custom"
+        Me.C_Eye.UseVisualStyleBackColor = False
         '
         'Eye_Selecting
         '
         Me.Eye_Selecting.BackColor = System.Drawing.Color.Gray
+        Me.Eye_Selecting.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Eye_Selecting.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Eye_Selecting.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Eye_Selecting.ForeColor = System.Drawing.Color.Black
@@ -260,48 +263,50 @@ Partial Class CaptainMaker
         Me.Label23.TabIndex = 41
         Me.Label23.Text = "Age"
         '
-        'Button7
+        'C_Age
         '
-        Me.Button7.BackColor = System.Drawing.Color.Gray
-        Me.Button7.FlatAppearance.BorderSize = 0
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.ForeColor = System.Drawing.Color.Black
-        Me.Button7.Location = New System.Drawing.Point(563, 570)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(100, 37)
-        Me.Button7.TabIndex = 39
-        Me.Button7.Text = "Custom"
-        Me.Button7.UseVisualStyleBackColor = False
+        Me.C_Age.BackColor = System.Drawing.Color.Gray
+        Me.C_Age.FlatAppearance.BorderSize = 0
+        Me.C_Age.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.C_Age.ForeColor = System.Drawing.Color.Black
+        Me.C_Age.Location = New System.Drawing.Point(563, 570)
+        Me.C_Age.Name = "C_Age"
+        Me.C_Age.Size = New System.Drawing.Size(100, 37)
+        Me.C_Age.TabIndex = 39
+        Me.C_Age.Text = "Custom"
+        Me.C_Age.UseVisualStyleBackColor = False
         '
-        'Age_Secting
+        'Age_Selecting
         '
-        Me.Age_Secting.BackColor = System.Drawing.Color.Gray
-        Me.Age_Secting.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Age_Secting.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Age_Secting.ForeColor = System.Drawing.Color.Black
-        Me.Age_Secting.FormattingEnabled = True
-        Me.Age_Secting.Items.AddRange(New Object() {"Very Old", "Old", "Middle Aged", "Young"})
-        Me.Age_Secting.Location = New System.Drawing.Point(196, 570)
-        Me.Age_Secting.Name = "Age_Secting"
-        Me.Age_Secting.Size = New System.Drawing.Size(353, 37)
-        Me.Age_Secting.TabIndex = 40
+        Me.Age_Selecting.BackColor = System.Drawing.Color.Gray
+        Me.Age_Selecting.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Age_Selecting.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Age_Selecting.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Age_Selecting.ForeColor = System.Drawing.Color.Black
+        Me.Age_Selecting.FormattingEnabled = True
+        Me.Age_Selecting.Items.AddRange(New Object() {"Very Old", "Old", "Middle Aged", "Young"})
+        Me.Age_Selecting.Location = New System.Drawing.Point(196, 570)
+        Me.Age_Selecting.Name = "Age_Selecting"
+        Me.Age_Selecting.Size = New System.Drawing.Size(353, 37)
+        Me.Age_Selecting.TabIndex = 40
         '
-        'Button6
+        'C_Skin
         '
-        Me.Button6.BackColor = System.Drawing.Color.Gray
-        Me.Button6.FlatAppearance.BorderSize = 0
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.ForeColor = System.Drawing.Color.Black
-        Me.Button6.Location = New System.Drawing.Point(563, 492)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(100, 37)
-        Me.Button6.TabIndex = 37
-        Me.Button6.Text = "Custom"
-        Me.Button6.UseVisualStyleBackColor = False
+        Me.C_Skin.BackColor = System.Drawing.Color.Gray
+        Me.C_Skin.FlatAppearance.BorderSize = 0
+        Me.C_Skin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.C_Skin.ForeColor = System.Drawing.Color.Black
+        Me.C_Skin.Location = New System.Drawing.Point(563, 492)
+        Me.C_Skin.Name = "C_Skin"
+        Me.C_Skin.Size = New System.Drawing.Size(100, 37)
+        Me.C_Skin.TabIndex = 37
+        Me.C_Skin.Text = "Custom"
+        Me.C_Skin.UseVisualStyleBackColor = False
         '
         'Skin_Selecting
         '
         Me.Skin_Selecting.BackColor = System.Drawing.Color.Gray
+        Me.Skin_Selecting.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Skin_Selecting.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Skin_Selecting.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Skin_Selecting.ForeColor = System.Drawing.Color.Black
@@ -312,22 +317,23 @@ Partial Class CaptainMaker
         Me.Skin_Selecting.Size = New System.Drawing.Size(353, 37)
         Me.Skin_Selecting.TabIndex = 38
         '
-        'Button5
+        'C_Body
         '
-        Me.Button5.BackColor = System.Drawing.Color.Gray
-        Me.Button5.FlatAppearance.BorderSize = 0
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.ForeColor = System.Drawing.Color.Black
-        Me.Button5.Location = New System.Drawing.Point(563, 411)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(100, 37)
-        Me.Button5.TabIndex = 35
-        Me.Button5.Text = "Custom"
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.C_Body.BackColor = System.Drawing.Color.Gray
+        Me.C_Body.FlatAppearance.BorderSize = 0
+        Me.C_Body.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.C_Body.ForeColor = System.Drawing.Color.Black
+        Me.C_Body.Location = New System.Drawing.Point(563, 411)
+        Me.C_Body.Name = "C_Body"
+        Me.C_Body.Size = New System.Drawing.Size(100, 37)
+        Me.C_Body.TabIndex = 35
+        Me.C_Body.Text = "Custom"
+        Me.C_Body.UseVisualStyleBackColor = False
         '
         'Body_Selecting
         '
         Me.Body_Selecting.BackColor = System.Drawing.Color.Gray
+        Me.Body_Selecting.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Body_Selecting.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Body_Selecting.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Body_Selecting.ForeColor = System.Drawing.Color.Black
@@ -338,22 +344,23 @@ Partial Class CaptainMaker
         Me.Body_Selecting.Size = New System.Drawing.Size(353, 37)
         Me.Body_Selecting.TabIndex = 36
         '
-        'Button4
+        'C_Height
         '
-        Me.Button4.BackColor = System.Drawing.Color.Gray
-        Me.Button4.FlatAppearance.BorderSize = 0
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.ForeColor = System.Drawing.Color.Black
-        Me.Button4.Location = New System.Drawing.Point(563, 333)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(100, 37)
-        Me.Button4.TabIndex = 33
-        Me.Button4.Text = "Custom"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.C_Height.BackColor = System.Drawing.Color.Gray
+        Me.C_Height.FlatAppearance.BorderSize = 0
+        Me.C_Height.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.C_Height.ForeColor = System.Drawing.Color.Black
+        Me.C_Height.Location = New System.Drawing.Point(563, 333)
+        Me.C_Height.Name = "C_Height"
+        Me.C_Height.Size = New System.Drawing.Size(100, 37)
+        Me.C_Height.TabIndex = 33
+        Me.C_Height.Text = "Custom"
+        Me.C_Height.UseVisualStyleBackColor = False
         '
         'Height_Selecting
         '
         Me.Height_Selecting.BackColor = System.Drawing.Color.Gray
+        Me.Height_Selecting.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Height_Selecting.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Height_Selecting.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Height_Selecting.ForeColor = System.Drawing.Color.Black
@@ -364,22 +371,23 @@ Partial Class CaptainMaker
         Me.Height_Selecting.Size = New System.Drawing.Size(353, 37)
         Me.Height_Selecting.TabIndex = 34
         '
-        'Button3
+        'C_HairC
         '
-        Me.Button3.BackColor = System.Drawing.Color.Gray
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.ForeColor = System.Drawing.Color.Black
-        Me.Button3.Location = New System.Drawing.Point(566, 174)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(100, 37)
-        Me.Button3.TabIndex = 31
-        Me.Button3.Text = "Custom"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.C_HairC.BackColor = System.Drawing.Color.Gray
+        Me.C_HairC.FlatAppearance.BorderSize = 0
+        Me.C_HairC.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.C_HairC.ForeColor = System.Drawing.Color.Black
+        Me.C_HairC.Location = New System.Drawing.Point(566, 174)
+        Me.C_HairC.Name = "C_HairC"
+        Me.C_HairC.Size = New System.Drawing.Size(100, 37)
+        Me.C_HairC.TabIndex = 31
+        Me.C_HairC.Text = "Custom"
+        Me.C_HairC.UseVisualStyleBackColor = False
         '
         'HairC_Selecting
         '
         Me.HairC_Selecting.BackColor = System.Drawing.Color.Gray
+        Me.HairC_Selecting.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.HairC_Selecting.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.HairC_Selecting.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HairC_Selecting.ForeColor = System.Drawing.Color.Black
@@ -390,22 +398,23 @@ Partial Class CaptainMaker
         Me.HairC_Selecting.Size = New System.Drawing.Size(353, 37)
         Me.HairC_Selecting.TabIndex = 32
         '
-        'Button2
+        'C_HairS
         '
-        Me.Button2.BackColor = System.Drawing.Color.Gray
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(566, 96)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(100, 37)
-        Me.Button2.TabIndex = 24
-        Me.Button2.Text = "Custom"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.C_HairS.BackColor = System.Drawing.Color.Gray
+        Me.C_HairS.FlatAppearance.BorderSize = 0
+        Me.C_HairS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.C_HairS.ForeColor = System.Drawing.Color.Black
+        Me.C_HairS.Location = New System.Drawing.Point(566, 96)
+        Me.C_HairS.Name = "C_HairS"
+        Me.C_HairS.Size = New System.Drawing.Size(100, 37)
+        Me.C_HairS.TabIndex = 24
+        Me.C_HairS.Text = "Custom"
+        Me.C_HairS.UseVisualStyleBackColor = False
         '
         'HairS_Selecting
         '
         Me.HairS_Selecting.BackColor = System.Drawing.Color.Gray
+        Me.HairS_Selecting.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.HairS_Selecting.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.HairS_Selecting.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HairS_Selecting.ForeColor = System.Drawing.Color.Black
@@ -922,6 +931,19 @@ Partial Class CaptainMaker
         Me.SkillPoints.TabIndex = 56
         Me.SkillPoints.Text = "0"
         '
+        'RandomApperance
+        '
+        Me.RandomApperance.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.RandomApperance.FlatAppearance.BorderSize = 0
+        Me.RandomApperance.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.RandomApperance.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RandomApperance.Location = New System.Drawing.Point(563, 0)
+        Me.RandomApperance.Name = "RandomApperance"
+        Me.RandomApperance.Size = New System.Drawing.Size(112, 40)
+        Me.RandomApperance.TabIndex = 46
+        Me.RandomApperance.Text = "Random"
+        Me.RandomApperance.UseVisualStyleBackColor = False
+        '
         'CaptainMaker
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
@@ -1016,21 +1038,21 @@ Partial Class CaptainMaker
     Friend WithEvents Label16 As Label
     Friend WithEvents Label22 As Label
     Friend WithEvents HairS_Selecting As ComboBox
-    Friend WithEvents Button8 As Button
+    Friend WithEvents C_Eye As Button
     Friend WithEvents Eye_Selecting As ComboBox
     Friend WithEvents Label24 As Label
     Friend WithEvents Label23 As Label
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Age_Secting As ComboBox
-    Friend WithEvents Button6 As Button
+    Friend WithEvents C_Age As Button
+    Friend WithEvents Age_Selecting As ComboBox
+    Friend WithEvents C_Skin As Button
     Friend WithEvents Skin_Selecting As ComboBox
-    Friend WithEvents Button5 As Button
+    Friend WithEvents C_Body As Button
     Friend WithEvents Body_Selecting As ComboBox
-    Friend WithEvents Button4 As Button
+    Friend WithEvents C_Height As Button
     Friend WithEvents Height_Selecting As ComboBox
-    Friend WithEvents Button3 As Button
+    Friend WithEvents C_HairC As Button
     Friend WithEvents HairC_Selecting As ComboBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents C_HairS As Button
     Friend WithEvents ResetPoints As Button
     Friend WithEvents Label25 As Label
     Friend WithEvents EngiUP As Button
@@ -1052,4 +1074,5 @@ Partial Class CaptainMaker
     Friend WithEvents EngiDown As Button
     Friend WithEvents TraitPoints As Label
     Friend WithEvents SkillPoints As Label
+    Friend WithEvents RandomApperance As Button
 End Class
